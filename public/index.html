@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Scrapper</title>
+    <meta name = "viewport" content = "width = device-width, initial-scale = 1">   
+    <link rel = "stylesheet"
+    href = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+    <!-- <link rel="stylesheet" href="signin.css">-->
+    <link href="https://fonts.googleapis.com/css?family=Hind+Siliguri:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script type = "text/javascript" src = "https://code.jquery.com/jquery-2.1.1.min.js">
+    </script>           
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js">
+    </script>    
+    <style>
+        body {
+            height: 100%;
+            width: 100%;
+            background-size: contain;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+        #signin:hover {
+            display: block;
+            opacity: 0.9;
+        }
+        /* label focus color */
+        .input-field input[type=text]:focus + label {
+            color: #d84315;
+        }
+        /* label focus color */
+        .input-field input[type=number]:focus + label {
+            color: #d84315;
+        }
+        /* label underline focus color */
+        .input-field input[type=text]:focus {
+            border-bottom: 1px solid #d84315;
+            box-shadow: 0 1px 0 0 #d84315;
+        }
+        .input-field input[type=number]:focus {
+            border-bottom: 1px solid #d84315;
+            box-shadow: 0 1px 0 0 #d84315;
+        }
+        ul.dropdown-content.select-dropdown li span {
+            color: #d84315; /* no need for !important :) */
+        }
+        /* Create two equal columns that floats next to each other */
+        .navbar {
+            line-height: 110px;
+            height: 110px;
+            padding-top: 0;
+            margin-bottom: 130px;
+            background-color: #2d2d30;
+            border: 0;
+            font-size: 55px !important;
+            letter-spacing: 12px;
+            opacity: 0.9;
+            font-family:'Hind Siliguri', sans-serif';
+        }
+        #submit {
+            margin: 0 0 1.5% 0;
+            background-color: #d84315;
+        }
+        #form {
+            height: 90%;
+            max-width: 52%;
+            opacity: 0.9;
+            background-color: white;
+        }
+        #column {
+            padding: 0 20px 0 20px;
+        }
+        .resize {
+            padding: 20px;
+        }
+        #link {
+            margin: 2%
+        }
+        a {
+            color: #d84315;
+        }
+    </style>
+   
+  </head>
+  <body>
+
+      <nav>
+          <div class="nav-wrapper black">
+            <a href="#" class="brand-logo right">Mongo Scrapper</a>
+            <ul id="nav-mobile" class="left hide-on-med-and-down">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="saved.html">Saved Article</a></li>
+            </ul>
+          </div>
+      </nav>
+
+      <div class="row">
+          <div class="col s12 m12">
+            <div class="card black darken-1">
+              <br>
+              <div class="card-content white-text center">
+                  <span class="card-title">Scrape News</span>
+                  <br>
+                  <br>
+       
+                  <button class="btn waves-effect waves-light" type="submit" id="scrape">Scrape</button>
+              </div>
+              <br>
+            </div>
+          </div>
+      </div>
+
+      <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal_box">Note</button> -->
+
+      <div class="modal fade" id="modal_box" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true" style="z-index:7">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-body">
+              <form>
+                <div class="form-group">
+                  <label for="title" class="col-form-label">Title</label>
+                  <input type="text" class="form-control" id="title">
+                </div>
+                <div class="form-group">
+                  <label for="content" class="col-form-label">Contents</label>
+                  <textarea class="form-control" id="content"></textarea>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" id="button_note" data-Id='' data-dismiss="modal">Save</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+
+      <div class="row" id="articles"></div>
+
+      <footer class="page-footer black">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">MoMo Scrapper</h5>
+                <p class="grey-text text-lighten-4">You can save scrapped news and save it whenever you like to.</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2018 Copyright
+    
+            </div>
+          </div>
+        </footer>
+
+    <!-- <div id="wrapper">
+      <h1>Note Scraper</h1>
+      <h2><i>If you can do this...the homework should be no problem.</i></h2>
+      <div id="articles"></div>
+      <div id="notes"></div>
+    </div> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+    <script src="index.js"></script>
+    </body>
+</html>
